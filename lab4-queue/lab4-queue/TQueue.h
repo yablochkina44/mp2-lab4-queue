@@ -11,7 +11,7 @@ class TQueue
 	int tail;		//хвост очереди
 	int len;		//длина очереди
 public:
-	TQueue(int m = 10);
+	TQueue(int m = 100);
 	TQueue(const TQueue& Q);
 	~TQueue<T>() { delete[] mas; }
 
