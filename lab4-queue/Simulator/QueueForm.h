@@ -292,9 +292,13 @@ namespace Simulator {
 		}
 		void Clean()
 		{
-			int start = 360 * quq->TopHead() / quq->GetMaxsize();
-			int finish = 360 * (quq->GetLen()) / quq->GetMaxsize();
-			gr->DrawArc(WhitePen, x0, y0, w0, h0, start, finish);
+			if (quq->TopHead() != 0)
+			{
+				int start = 360 * quq->TopHead() / quq->GetMaxsize();
+				int finish = 360 * (quq->GetLen()) / quq->GetMaxsize();
+				gr->DrawArc(WhitePen, x0, y0, w0, h0, start, finish);
+			}
+			
 		}
 	
 	private: System::Void textBox1_maxlen_TextChanged(System::Object^ sender, System::EventArgs^ e) {

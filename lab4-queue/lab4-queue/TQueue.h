@@ -72,7 +72,7 @@ template <class T>
 T TQueue<T>::Pop()
 {
 	if (IsEmpty())
-		throw - 1;
+		throw -1;
 	else
 	{
 
@@ -86,7 +86,7 @@ template<class T>
 T TQueue<T>::TopHead()
 {
 	if (IsEmpty())
-		throw - 1;
+		return 0;
 	else
 	{
 		return mas[head];
